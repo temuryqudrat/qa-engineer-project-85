@@ -5,7 +5,7 @@ status: pass
 
 - summary: |
     Проверка успешного входа пользователя
- status: pass
+status: pass
 
 - summary: |
     Проверка входа пользователя с несуществующими логином и паролем
@@ -37,7 +37,7 @@ status: pass
 
 - summary: |
     Проверка успешной регистрации через Github
- status: pass
+status: pass
 
 - summary: |
     Проверка успешной регистрации через Discord
