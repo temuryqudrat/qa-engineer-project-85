@@ -144,3 +144,35 @@
     - Нажать на "Save"
   expected-result: |
     Выбранный ЯП сохранен
+
+- summary: |
+    Проверка успешной регистрации через Github
+  requirement: |
+    Проверка авторизации нового пользователя через Github
+  prerequisites:
+    Открыта страница "Sign in"
+  test-data: |
+    Email = qudrat@sms-man.com  Пароль = Qudrat.123
+  steps:
+    - Нажимаем на кнопку "Sign in with Github"
+    - Вводим логин от своего аккаунта на Github
+    - Вводим пароль
+    - Нажимаем кнопку «Sign In»
+  expected-result: |
+    Пользователь переносится на главную страницу Hexlet Codebattle и получает уведомление "Successfully authenticated"
+
+- summary: |
+    Проверка успешной регистрации через Discord
+  requirement: |
+    Проверка авторизации нового пользователя через Discord
+  prerequisites:
+    Открыта страница "Sign in"
+  test-data: |
+    Email = qudrat@sms-man.com  Пароль = Qudrat.123
+  steps:
+    - Нажимаем на кнопку "Sign in with Discord"
+    - Вводим логин от своего аккаунта на Discord
+    - Вводим пароль
+    - Нажимаем на кнопку "Авторизовать"
+  expected-result: |
+    Пользователь переносится на главную страницу Hexlet Codebattle и получает уведомление "Successfully authenticated"
