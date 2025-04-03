@@ -1,60 +1,60 @@
 ---
 - summary: |
     Проверка регистрации нового пользователя 
-status: pass
+  status: pass
 
 - summary: |
     Проверка успешного входа пользователя
-status: pass
+  status: pass
 
 - summary: |
     Проверка входа пользователя с несуществующими логином и паролем
-status: pass
+  status: pass
 
 - summary: |
     Проверка создания игры
-status: pass
+  status: pass
 
 - summary: |
     Проверка создания турнира
-status: pass
+  status: pass
 
 - summary: |
     Проверка победы в игре 
-status: pass
+  status: pass
 
 - summary: |
     Проверка добровольной сдачи в игре 
-status: pass
-
+  status: pass
+ 
 - summary: |
     Проверка обнуления таймера в игре 
-status: pass
+  status: pass
 
 - summary: |
     Проверка выбора и сохранения ЯП 
-status: pass
+  status: pass
 
 - summary: |
     Проверка успешной регистрации через Github
-status: pass
+  status: pass
 
 - summary: |
     Проверка успешной регистрации через Discord
-status: fail
+  status: fail
 
 - summary: |
     Проверка просмотра профиля другого игрока
-status: pass
+  status: pass
 
 - summary: |
     Проверка отправления личного сообщения другому игроку
-status: pass
+  status: pass
 
 - summary: |
     Проверка функции "Follow" другого игрока
-status: pass
+  status: pass
 
 - summary: |
     Проверка функции "Invite" 
-status: pass
+  status: pass
