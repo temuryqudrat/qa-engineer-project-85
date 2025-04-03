@@ -135,6 +135,8 @@
   prerequisites:
     Пользователь авторизован
     Открыта главная страница
+  test-data: |
+    Your weapon = python
   steps:
     - Нажать на иконку аккаунта
     - Нажать на кнопку "Settings"
