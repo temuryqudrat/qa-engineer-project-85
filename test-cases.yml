@@ -22,7 +22,7 @@
   prerequisites:
     Открыта страница "Sign in"
   test-data: |
-    Email = qudrat@sms-man.com  Пароль = Qudrat.123
+    Email = qudrat.temury@gmail.com  Пароль = Qudrat.123
   steps:
     - Вводим логин
     - Вводим пароль
@@ -31,19 +31,53 @@
     Пользователь переносится на главную страницу и получает уведомление "Successfully authenticated"
 
 - summary: |
-    Проверка входа пользователя с несуществующими логином и паролем
+    Проверка входа пользователя с несуществующими логином/почтой
   requirement: |
-    При неправильном логине или пароле пользователь должен получить сообщение об ошибке
+    При вводе  несушествуюшего логина/почты пользователь должен получить сообщение об ошибке
   prerequisites:
     Открыта страница "Sign in"
+    Есть пользователь с почтой tests@gmail.com
   test-data: |
-    Email = test@gmail.com  Пароль = badpass
+    Email = tests@gmail.com  Пароль = badpass
   steps:
     - Вводим логин
     - Вводим пароль
     - Нажимаем кнопку «Submit»
   expected-result: |
     Пользователь получает ошибку "EMAIL_NOT_FOUND"
+
+- summary: |
+    Проверка входа пользователя с неверным паролем
+  requirement: |
+    При вводе неправильного пароля пользователь должен получить сообщение об ошибке
+  prerequisites:
+    Открыта страница "Sign in"
+    Есть пользователь с почтой tests@gmail.com
+  test-data: |
+    Email = qudrat.temury@gmail.com  Пароль = badpass
+  steps:
+    - Вводим логин
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь получает ошибку "INVALID_PASSWORD"
+
+- summary: |
+    Попытка регистрации пользователя с занятой почтой
+  requirement: |
+    При попытке зарегестрировать нового пользователя занятой почтой должна произойти ошибка и  платформа должна об этом сообщить пользователю
+  prerequisites:
+    Открыта страница "Sign up"
+  test-data: |
+    Email = qudrat.temury@gmail.com  Пароль = badpass
+  steps:
+    - Вводим никнейм
+    - Вводим почту
+    - Вводим пароль
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь получает ошибку "Email is already taken"
 
 - summary: |
     Проверка создания игры
