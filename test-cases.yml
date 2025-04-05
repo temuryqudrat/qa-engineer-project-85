@@ -16,6 +16,57 @@
     Пользователь создается и открывается главная страница
 
 - summary: |
+    Проверка валидатора никнейма при регистрации 
+  requirement: |
+    При создании никнейма нужно использовать цифры, буквы и "_"
+  prerequisites:
+    Открыта страница "Sign up"
+  test-data: |
+    Nickname = Qudrat123! Email = qudrat.temury@gmail.com Password = Qudrat.123 Password Confirmation = Qudrat.123
+  steps:
+    - Вводим никнейм
+    - Вводим почту
+    - Вводим пароль
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователю выдается ошибка "Should contain Latin letters, numbers and underscores. Only begin with latin letter"
+
+- summary: |
+    Проверка валидатора почты при регистрации 
+  requirement: |
+    При создании аккаунта проверяется корректность почты
+  prerequisites:
+    Открыта страница "Sign up"
+  test-data: |
+    Nickname = Qudrat123! Email = qudrat@.comm Password = Qudrat.123 Password Confirmation = Qudrat.123
+  steps:
+    - Вводим никнейм
+    - Вводим почту
+    - Вводим пароль
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователю выдается ошибка "Invalid email"
+
+- summary: |
+    Проверка валидатора пароля при регистрации 
+  requirement: |
+    При создании аккаунта проверяется корректность почты. Не менее 6 символов и хотя бы 1 спец.символ
+  prerequisites:
+    Открыта страница "Sign up"
+  test-data: |
+    Nickname = Qudrat123! Email = qudrat@gmail.comm Password = Qudrat Password Confirmation = Qudrat
+  steps:
+    - Вводим никнейм
+    - Вводим почту
+    - Вводим пароль
+    - Вводим пароль
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователю выдается ошибка "Should contain at least one special character"
+
+- summary: |
     Проверка успешного входа пользователя
   requirement: |
     Проверка входа в свой аккаунт после его создания
