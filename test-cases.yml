@@ -52,9 +52,9 @@
     При вводе неправильного пароля пользователь должен получить сообщение об ошибке
   prerequisites:
     Открыта страница "Sign in"
-    Есть пользователь с почтой tests@gmail.com
+    Есть пользователь с почтой tests@gmail.com и паролем testpass
   test-data: |
-    Email = qudrat.temury@gmail.com  Пароль = badpass
+    Email = tests@gmail.com  Пароль = badpass
   steps:
     - Вводим логин
     - Вводим пароль
@@ -78,6 +78,22 @@
     - Нажимаем кнопку «Submit»
   expected-result: |
     Пользователь получает ошибку "Email is already taken"
+
+- summary: |
+    Проверка сброса и установления нового пароля
+  requirement: |
+    Платформа позволяет пользователю сбросить текущий пароль и установить новый
+  prerequisites:
+    Открыта страница "Sign in"
+    Есть пользователь с почтой "qudrat@sms-man.com"
+  test-data: |
+    Email = qudrat@sms-man.com
+  steps:
+    - Нажимаем на кнопку "Forgot your password?"
+    - Вводим почту qudrat@sms-man.com
+    - Нажимаем кнопку «Submit»
+  expected-result: |
+    Пользователь получает сообщение что ему на почту была отправлена ссылка на сброс пароля
 
 - summary: |
     Проверка создания игры
