@@ -1,24 +1,23 @@
----
 - summary: |
-    Проверка регистрации нового пользователя 
+    Проверка регистрации нового пользователя
+  status: pass
+
+- summary: |
+    Проверка валидатора никнейма при регистрации
+  status: pass
+
+- summary: |
+    Проверка валидатора почты при регистрации
+  status: pass
+
+- summary: |
+    Проверка валидатора пароля при регистрации
   status: pass
 
 - summary: |
     Проверка успешного входа пользователя
   status: pass
 
-- summary: |
-    Проверка валидатора никнейма при регистрации 
-  status: pass
-
-- summary: |
-    Проверка валидатора почты при регистрации 
-  status: pass
-
-- summary: |
-    Проверка валидатора пароля при регистрации 
-  status: pass
-  
 - summary: |
     Проверка входа пользователя с несуществующими логином/почтой
   status: pass
@@ -34,6 +33,7 @@
 - summary: |
     Проверка сброса и установления нового пароля
   status: pass
+
 - summary: |
     Проверка создания игры
   status: pass
@@ -43,23 +43,23 @@
   status: pass
 
 - summary: |
-    Проверка победы в игре 
+    Проверка победы в игре
   status: pass
 
 - summary: |
-    Проверка добровольной сдачи в игре 
+    Проверка добровольной сдачи в игре
   status: pass
- 
+
 - summary: |
-    Проверка обнуления таймера в игре 
+    Проверка обнуления таймера в игре
   status: pass
 
 - summary: |
     Проверка компиляции неверного кода
   status: pass
-  
+
 - summary: |
-    Проверка выбора и сохранения ЯП 
+    Проверка выбора и сохранения ЯП
   status: pass
 
 - summary: |
@@ -83,5 +83,45 @@
   status: pass
 
 - summary: |
-    Проверка функции "Invite" 
+    Проверка функции "Invite"
+  status: pass
+
+- summary: |
+    Проверка привязки аккаунта Github на созданный аккаунт в codebattle
+  status: pass
+
+- summary: |
+    Проверка привязки аккаунта Discord на созданный аккаунт в codebattle
+  status: fail
+
+- summary: |
+    Проверка создания собственного клана
+  status: pass
+
+- summary: |
+    Проверка страницы "My profile"
+  status: pass
+
+- summary: |
+    Проверка редактирования имени в "Settings"
+  status: pass
+
+- summary: |
+    Проверка рейтинга пользователей
+  status: pass
+
+- summary: |
+    Проверка поиска пользователя в "Users rating"
+  status: pass
+
+- summary: |
+    Проверка просмотра созданной задачи в "Tasks"
+  status: pass
+
+- summary: |
+    Проверка создания новой задачи с помощью "Create new task"
+  status: pass
+
+- summary: |
+    Проверка просмотра клана в "Clans"
   status: pass
