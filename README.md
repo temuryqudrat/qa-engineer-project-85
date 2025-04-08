@@ -1,2 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/temuryqudrat/qa-engineer-project-85/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/temuryqudrat/qa-engineer-project-85/actions)
+## Описание проекта
+Проект посвящен ручному тестированию веб-сайта [CodeBattle](https://codebattle.hexlet.io/), который представляет собой платформу для проведения кодинг-игр между пользователями. Основная цель тестирования — гарантировать корректную функциональность игрового процесса, интерфейса пользователя и системы регистрации/аутентификации
+## Тестовые сценарии
+Полный перечень тестовых сценариев доступен в файле [***test-cases.yml***](https://github.com/temuryqudrat/qa-engineer-project-85/blob/main/test-cases.yml). Данный документ содержит все необходимые детали для проведения тестирования, включая шаги, ожидаемые результаты и условия выполнения.
+## Баг-репорты
+В процессе последнего цикла тестирования были идентифицированы различные дефекты, включая как новые, так и ранее обнаруженные баги, которые были ошибочно помечены как исправленные. Для ознакомления с актуальным списком известных проблем, не устраненных в текущей версии [9425fb5](https://github.com/hexlet-codebattle/codebattle/commit/9425fb5e75cad8d07445fe323a897153c2b85ab9), смотрите документ [***issues.yml***](https://github.com/temuryqudrat/qa-engineer-project-85/blob/main/issues.yml). Дополнительно, документ [***reopened_issues.yml***](https://github.com/temuryqudrat/qa-engineer-project-85/blob/main/reopened_issues.yml) содержит информацию о багах, которые были повторно открыты, поскольку они продолжают воспроизводиться несмотря на предыдущие попытки их исправления.
